@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="herbal/logo1.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SavvyShopper</title>
   <link rel="stylesheet" href="stylesheet.css">
@@ -9,58 +10,617 @@
 <body>
 <!-- navbar -->
   <nav class="navbar">
-    <div class="logo"><img src="/herbal/logo.png" alt="logo" width="190px"></div>
+    <div class="logo"><img src="herbal/logo.png" alt="logo" width="190px"></div>
     <ul class="menu">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html">Home</a></li>
+      <div class="dropdown">
+        <button class="dropbtn">Shop</button>
+        <div class="dropdown-content">
+        <a href="homecare.html">Home Care</a>
+        <a href="babycare.html">Baby Care</a>
+        <a href="health.html">Health & Nutrition</a>
+        <a href="agriculture.html">Agriculture & Veterinary</a>
+        <a href="skincare.html">Skin Care</a>
+        <a href="personal.html">Personal Care</a>
+        <a href="books.html">Books & Literature</a>
+        <a href="food.html">Food Care</a>
+        </div>
+      </div>
       <li><a href="#about">About</a></li>
-      <li><a href="register.html">Join Membership/Contact</a></li> <!-- yaha pe dekhte h kya rkhna h -->
-      <li><a href="login.html" class="button1">Login/Sign Up</a></li>
-      <li><a href="#search"><img src="/herbal/search.png" alt="" width="20px"></a></li>
-      <li><a href="#cart"><img src="/herbal/cart.png" alt="" width="25px"></a></li>
+      <li><a href="register.html">Join Membership</a></li> <!-- yaha pe dekhte h kya rkhna h -->
+      <li><a href="logout.php" class="button1">Logout</a></li>
+      <li><a href="#search"><img src="herbal/search.png" alt="" width="20px"></a></li>
+      <li><a href="#cart"><img src="herbal/cart.png" alt="" width="25px"></a></li>
     </ul>
   </nav>
-  <div id="shopheader">
-    <div class="container">
-    </div>
-  </div>
-<div id="product">
-    <div class="container">
-        <div class="row">
-            <div class="columnc1">
-                <div class="card">
-                  <img src="/herbal/lifestyle.png" alt="Avatar" style="width:50%"><hr>
-                  <h4>Herbal Lifestyle</h4>
-                  <h5>Rs. 20</h5>
-                </div>
-              </div>
-              <div class="columnc2">
-                <div class="card">
-                  <img src="/herbal/lifestyle.png" alt="Avatar" style="width:50%"><hr>
-                  <h4>Herbal Lifestyle</h4>
-                  <h5>Rs. 30</h5>
-                </div>
-              </div>
-              <div class="columnc3">
-                <div class="card">
-                  <img src="/herbal/lifestyle.png" alt="Avatar" style="width:50%"><hr>
-                  <h4>Herbal Lifestyle</h4>
-                  <h5>Rs. 30</h5>
-                </div>
-              </div>
-              <div class="columnc4">
-                <div class="card">
-                  <img src="/herbal/lifestyle.png" alt="Avatar" style="width:50%"><hr>
-                  <h4>Herbal Lifestyle</h4>
-                  <h5>Rs. 30</h5>
-                </div>
-              </div>
-        </div>
-    </div>
-</div>
 
-<!-- form for the webiste -->
-<div id="form">
+  <!-- Product content -->
+  <div id="product">
+    <div class="background-baby">
+      <h2>Welcome to the Common Pool!</h2><hr style="margin-left:1%;margin-right:1%;">
+     </div>
+    <div class="product-container">
+    <div class="product-card">
+      <img src="herbal/aloe vita.jpg" alt="Avatar" style="width:100%">
+      <h4>Herbal Aloe Vita</h4>
+      <p class="price">Rs. 300</p>
+      <p>Fulfills vitamins & minerals deficiencies, improves fertility, productivity, accelerates growth</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+    </div>
+
+    <div class="product-card">
+        <img src="herbal/aloe vical.jpg" alt="Avatar" style="width:100%">
+        <h4>Herbal Aloe Vical</h4>
+      <p class="price">Rs. 725</p>
+      <p>It is helpful in making bones strong in growing animals & increases milk production.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+      </div>
+
+    <div class="product-card">
+        <img src="herbal/booster.jpg" alt="Avatar" style="width:100%">
+       <h4>Agro Growth Booster</h4>
+      <p class="price">Rs. 450</p>
+      <p>Made with camphor & cloves having religious practices like pooja & hawan</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+      </div>
+
+
+      <div class="product-card">
+        <img src="herbal/seedssss.jpg" alt="Avatar" style="width:100%">
+        <h4>Flower Kare</h4>
+      <p class="price">Rs. 695</p>
+      <p>Helps in protecting seeds from pests and diseases grown out of land. </p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+      </div>
+    
+      <div class="product-card">
+          <img src="herbal//hydrogel.jpg" alt="Avatar" style="width:100%">
+         <h4>Hydrogel</h4>
+      <p class="price">Rs. 1640</p>
+      <p>Biodegradable absorbent polymer enriched with potassium. Maintains humidity in farms.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+        </div> 
+
+        <div class="product-card">
+          <img src="herbal//activator.jpg" alt="Avatar" style="width:100%">
+       <h4>Activator</h4>
+      <p class="price">Rs. 650</p>
+      <p>It activates the spray fluid to moisten the leaf surface, uniform spreading.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+        </div>
+
+        <div class="product-card">
+          <img src="herbal/granule.jpg" alt="Avatar" style="width:100%">
+          <h4>Promoter Granules</h4>
+        <p class="price">Rs. 500</p>
+        <p>Prepared with unique mixture of natural sources, this product is highly beneficial for crops.</p>
+        <p><button>Add to Cart</button></p>
+        <p><button>Buy Now</button></p>
+        </div> 
+
+        <div class="product-card">
+          <img src="herbal/seed.jpg" alt="Avatar" style="width:100%">
+          <h4>Seed Kare</h4>
+        <p class="price">Rs. 450</p>
+        <p>It helps in protecting seeds from the pests and diseases grown out of land.</p>
+        <p><button>Add to Cart</button></p>
+        <p><button>Buy Now</button></p>
+        </div> 
+
+        <div class="product-card">
+          <img src="herbal/aloetalcum.webp" alt="Avatar" style="width:100%">
+          <h4>Aloe Talcum Powder</h4>
+          <p class="price">Rs.225</p>
+          <p>It keeps the skin hydrated, fresh and odorless.</p>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+        </div>
+
+        <div class="product-card">
+            <img src="herbal/lotion.jpg" alt="Avatar" style="width:100%">
+            <h4>Moisturizing Lotion</h4>
+          <p class="price">Rs.275</p>
+          <p>It's an effective product for delicate skin of the baby.</p>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+          </div>
+
+        
+          <div class="product-card">
+            <img src="herbal/babysoap.jpg" alt="Avatar" style="width:100%">
+         <h4>Baby Skin Bar</h4>
+        <p class="price">Rs.105</p>
+        <p>Provides the baby’s skin with all the essential nourishing.</p>
+        <p><button>Add to Cart</button></p>
+        <p><button>Buy Now</button></p>
+          </div>
+
+        <div class="product-card">
+            <img src="herbal/wipes.jpg" alt="Avatar" style="width:100%">
+            <h4>Baby Wipes</h4>
+          <p class="price">Rs.250</p>
+          <p>It keeps the baby happier and healthier.</p>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+          </div>
+
+          <div class="product-card">
+            <img src="herbal/massageoil.jpg" alt="Avatar" style="width:100%">
+           <h4>Massage Oil</h4>
+          <p class="price">Rs.365</p>
+          <p>Product that brings strength, protection and hydration to fragile skin of babies. </p>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+          </div>
+
+          <div class="product-card">
+              <img src="herbal/shampoo.jpg" alt="Avatar" style="width:100%">
+             <h4>Baby Hair & Body Wash</h4>
+          <p class="price">Rs.285</p>
+          <p>It helps shield the baby’s body with a layer of protection and washes off attracted germs. </p><br>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+            </div>
+
+          <div class="product-card">
+           <img src="herbal/tonic.jpg" alt="Avatar" style="width:100%">
+         <h4>Bal Shakti Tonic</h4>
+          <p class="price">Rs.225</p>
+          <p>It catalyze the development of the child’s mental and physical systems.</p><br>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+            </div>
+
+          <div class="product-card">
+            <img src="herbal/toothbrush.jpg" alt="Avatar" style="width:100%">
+             <h4>ToothPaste for Babies</h4>
+          <p class="price">Rs.100</p>
+          <p>Fluoride-free ingredients to safely introduce oral hygiene habits.</p><br>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+          </div> 
+
+              <div class="product-card">
+                <img src="herbal/busniness.jpg" alt="Avatar" style="width:100%">
+                <h4>Business Plan</h4>
+                <p class="price">Rs. 300</p>
+                <p>It describes company's core business activities, objectives, plans and guidelines.</p>
+                <p><button>Add to Cart</button></p>
+                <p><button>Buy Now</button></p>
+              </div>
+          
+              <div class="product-card">
+                  <img src="herbal/rognidan.jpg" alt="Avatar" style="width:100%">
+                  <h4>Rog Nidan </h4>
+                <p class="price">Rs. 100</p>
+                <p>Absolutely a ready reckoner to fight with ailments and to live a healthy life.</p>
+                <p><button>Add to Cart</button></p>
+                <p><button>Buy Now</button></p>
+                </div>
+          
+              <div class="product-card">
+                  <img src="herbal/karoyamaro.jpg" alt="Avatar" style="width:100%">
+                 <h4>Karo Ya Maro</h4>
+                <p class="price">Rs. 495</p>
+                <p>Highly inspirational, each and every word has the power to encourage you.</p>
+                <p><button>Add to Cart</button></p>
+                <p><button>Buy Now</button></p>
+                </div>
+          
+          
+                <div class="product-card">
+                    <img src="herbal/executive.jpg" alt="Avatar" style="width:100%">
+                 <h4>Executive Diary </h4>
+                <p class="price">Rs. 295</p>
+                <p>Executive Diary, a perfect companion for you all around the year.</p>
+                <p><button>Add to Cart</button></p>
+                <p><button>Buy Now</button></p>
+                  </div>
+          
+                <div class="product-card">
+                    <img src="herbal/productguide.jpg" alt="Avatar" style="width:100%">
+                   <h4>Product Guide</h4>
+                <p class="price">Rs. 50</p>
+                <p>Detailed information and description of SavvyShopper products.</p>
+                <p><button>Add to Cart</button></p>
+                <p><button>Buy Now</button></p>
+                  </div>
+
+                <div class="product-card">
+                    <img src="herbal/productcatalogue.jpg" alt="Avatar" style="width:100%">
+                    <h4>Product Catalogue</h4>
+                  <p class="price">Rs. 195</p>
+                  <p>Includes detailed descriptions which helps customers understand & evaluate their offerings.</p>
+                  <p><button>Add to Cart</button></p>
+                  <p><button>Buy Now</button></p>
+                  </div> 
+
+                  <div class="product-card">
+                    <img src="herbal/AV.jpg" alt="Avatar" style="width:100%">
+                    <h4>A & V Product Catalogue</h4>
+                  <p class="price">Rs. 250</p>
+                  <p>It typically includes information on seeds, fertilizers, pesticides, and other agricultural products.</p>
+                  <p><button>Add to Cart</button></p>
+                  <p><button>Buy Now</button></p>
+                  </div> 
+
+                  <div class="product-card">
+                    <img src="herbal/mini.jpg" alt="Avatar" style="width:100%">
+                    <h4>Mini Product Catalogue</h4>
+                  <p class="price">Rs. 25</p>
+                  <p>Concise version of a full-fledged catalogue, showcasing a smaller selection of products</p>
+                  <p><button>Add to Cart</button></p>
+                  <p><button>Buy Now</button></p>
+                  </div> 
+
+                  <div class="product-card">
+                    <img src="herbal/haldi.jpg" alt="Avatar" style="width:100%">
+                    <h4>Turmeric Powder</h4>
+                    <p class="price">Rs. 77</p>
+                    <p>Works wonders for people with acute joint pains, bloating.</p>
+                    <p><button>Add to Cart</button></p>
+                    <p><button>Buy Now</button></p>
+                  </div>
+           
+                  <div class="product-card">
+                      <img src="herbal/dhania.jpg" alt="Avatar" style="width:100%">
+                      <h4>Dhania Powder</h4>
+                    <p class="price">Rs. 55</p>
+                    <p>Does not contain synthetic color or preservatives.</p>
+                    <p><button>Add to Cart</button></p>
+                    <p><button>Buy Now</button></p>
+                    </div>
+              
+                  <div class="product-card">
+                      <img src="herbal/garammasala.jpg" alt="Avatar" style="width:100%">
+                    <h4>Garam Masala Powder</h4>
+                  <p class="price">Rs. 130</p>
+                  <p>Builds immunity, Relieves pain and inflammation. </p>
+                  <p><button>Add to Cart</button></p>
+                  <p><button>Buy Now</button></p>
+                </div>
+          
+                <div class="product-card">
+                          <img src="herbal/greentea.jpg" alt="Avatar" style="width:100%">
+                         <h4>Green Tea With Berry & Herbs</h4>
+                        <p class="price">Rs. 200</p>
+                        <p>It is a simply refreshing tea resulting in a vibrant mind and body.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                        </div>
+                 
+                    <div class="product-card">
+                        <img src="herbal/chillipickle.jpg" alt="Avatar" style="width:100%">
+                        <h4>Green Chilli Pickle</h4>
+                          <p class="price">Rs. 120</p>
+                          <p>Green Chilli Pickle will definitely get the taste buds tickled.</p>
+                          <p><button>Add to Cart</button></p>
+                          <p><button>Buy Now</button></p>
+                      </div>
+                 
+                      <div class="product-card">
+                          <img src="herbal/channamasala.jpg" alt="Avatar" style="width:100%">
+                          <h4>Channa Masala Powder</h4>
+                    <p class="price">Rs. 115</p>
+                    <p>Traditional Indian Seasoning used for chickpeas dishes.</p>
+                    <p><button>Add to Cart</button></p>
+                    <p><button>Buy Now</button></p>
+                        </div>
+
+                        <div class="product-card">
+                          <img src="herbal/berryjam.jpg" alt="Avatar" style="width:100%">
+                          <h4>Mix Berry Jam </h4>
+                    <p class="price">Rs. 135</p>
+                    <p>Berry Jam is not merely a good stuff to take with bread.</p>
+                    <p><button>Add to Cart</button></p>
+                    <p><button>Buy Now</button></p>
+                        </div>
+
+                        <div class="product-card">
+                          <img src="herbal/antioxidant.jpg" alt="Avatar" style="width:100%">
+                          <h4>Anti-Oxidant Tea</h4>
+                    <p class="price">Rs. 165</p>
+                    <p>Help eliminate several health disorders and keep you fit and active.</p>
+                    <p><button>Add to Cart</button></p>
+                    <p><button>Buy Now</button></p>
+                        </div>
+
+                        <div class="product-card">
+                          <img src="herbal/tulsi-1539181_1920.jpg" alt="" style="width:100%">
+                          <h4>Shri Tulsi</h4>
+                          <p class="price">Rs. 200</p>
+                          <p>It is beneficial for more than 200 diseases like cold.</p>
+                          <p><button>Add to Cart</button></p>
+                          <p><button>Buy Now</button></p>
+                        </div>
+                  
+                        <div class="product-card">
+                            <img src="herbal/capsules-1079838_1920.jpg" alt="" style="width:100%">
+                            <h4>Aloe Digest</h4>
+                            <p class="price">Rs. 185</p>
+                            <p>Helps you to retrieve from digestive disorders like cramps, vomiting,etc</p>
+                            <p><button>Add to Cart</button></p>
+                            <p><button>Buy Now</button></p>
+                        </div>
+                        <div class="product-card">
+                        <img src="herbal/test-tube-5065418_1920.jpg" alt="" style="width:100%">
+                        <h4>Plus Eyedrop</h4>
+                        <p class="price">Rs. 125</p>
+                        <p>Prevents from various eye damages such as myopia, cataract.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                        </div>
+                  
+                        <div class="product-card">
+                        <img src="herbal/orange juice.jpg" alt="" style="width:100%">
+                        <h4>Noni Juice</h4>
+                        <p class="price">Rs. 650</p>
+                        <p>Controls blood sugar & bad cholestrol in cases of weight loss, irregular mensturation.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                        </div>
+                  
+                        <div class="product-card">
+                        <img src="herbal/blueberry-2350367_1920.jpg" alt="" style="width:100%">
+                        <h4>Berry Juice</h4>
+                        <p class="price">Rs. 675</p>
+                        <p>Regulates cholestrol level and aids in weight loss by enhancing metabolism.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                        </div>
+                    
+                        <div class="product-card">
+                        <img src="herbal/turmeric.jpg" alt="" style="width:100%">
+                        <h4>Shri Haldi</h4>
+                        <p class="price">Rs. 195</p>
+                        <p>Forces the poisonous substances from existing in your body to come out.</p><br>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                      </div>
+
+                      <div class="product-card">
+                        <img src="" alt="" style="width:100%">
+                        <h4>Shri Haldi</h4>
+                        <p class="price">Rs. 195</p>
+                        <p>Forces the poisonous substances from existing in your body to come out.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                      </div>
+                      <div class="product-card">
+                        <img src="" alt="" style="width:100%">
+                        <h4>Shri Haldi</h4>
+                        <p class="price">Rs. 195</p>
+                        <p>Forces the poisonous substances from existing in your body to come out.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                      </div>
+
+
+                      <div class="product-card">
+                        <img src="herbal/aloesoap.jpg" alt="Avatar" style="width:100%">
+                        <h4>Aloe Bright Bar</h4>
+                        <p class="price">Rs.195</p>
+                        <p>Formulated with natural ingredients beneficial for grease.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                      </div>
+                  
+                      <div class="product-card">
+                          <img src="herbal/cleaning-3977589_1920.jpg" alt="Avatar" style="width:100%">
+                          <h4>Cleaner</h4>
+                        <p class="price">Rs. 135</p>
+                        <p>It is beneficial for removes all kinds of stains, scratches or dark spots</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                        </div>
+                  
+                      <div class="product-card">
+                          <img src="herbal/agarbatti.jpg" alt="Avatar" style="width:100%">
+                         <h4>Nirogya Agarbatti</h4>
+                        <p class="price">Rs. 60</p>
+                        <p>Made with camphor & cloves having religious practices like pooja.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                        </div>
+                  
+                  
+                        <div class="product-card">
+                            <img src="herbal/powder.jpg" alt="Avatar" style="width:95%">
+                         <h4>Detergent Powder</h4>
+                        <p class="price">Rs. 195</p>
+                        <p>Lime & Neem helps to remove tough stains.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                          </div>
+                  
+                        <div class="product-card">
+                            <img src="herbal/lunch-box-749367_1920.jpg" alt="Avatar" style="width:100%">
+                           <h4>Steel Lunchbox</h4>
+                        <p class="price">Rs. 650</p>
+                        <p>Keeps the food in eatable condition for a long time.</p>
+                        <p><button>Add to Cart</button></p>
+                        <p><button>Buy Now</button></p>
+                          </div>
+
+                        <div class="product-card">
+                            <img src="herbal/utensilcleaner.jpg" alt="Avatar" style="width:100%">
+                            <h4>Utensil Cleaner</h4>
+                          <p class="price">Rs. 120</p>
+                          <p>Leaves no scratches or residue on the utensils.</p>
+                          <p><button>Add to Cart</button></p>
+                          <p><button>Buy Now</button></p>
+                          </div> 
+
+                          <div class="product-card">
+                            <img src="herbal/glasscleaner.jpg" alt="Avatar" style="width:100%">
+                            <h4>Glass Cleaner</h4>
+                          <p class="price">Rs. 135</p>
+                          <p>The eco-friendly Glass Cleanser gives a fresh swipe to all the glass.</p>
+                          <p><button>Add to Cart</button></p>
+                          <p><button>Buy Now</button></p>
+                          </div> 
+
+                          <div class="product-card">
+                            <img src="herbal/dhoop.jpg" alt="Avatar" style="width:100%">
+                            <h4>Neem Dhoop Stick</h4>
+                          <p class="price">Rs. 35</p>
+                          <p>Can use these herbal sticks while meditating or relaxing.</p>
+                          <p><button>Add to Cart</button></p>
+                          <p><button>Buy Now</button></p>
+                          </div> 
+
+                          <div class="product-card">
+                            <img src="herbal/shampoo2.jpg" alt="Avatar" style="width:100%">
+                            <h4>Anti-Hairfall Shampoo</h4>
+                            <p class="price">Rs. 265</p>
+                            <p>This excellent shampoo makes the hair clean, strong and shiny.</p>
+                            <p><button>Add to Cart</button></p>
+                            <p><button>Buy Now</button></p>
+                          </div>
+                      
+                          <div class="product-card">
+                              <img src="herbal/cream.jpg" alt="Avatar" style="width:100%">
+                              <h4>Repellent Cream</h4>
+                            <p class="price">Rs. 105</p>
+                            <p>Offers an effective protection from mosquitoes that spread diseases.</p>
+                            <p><button>Add to Cart</button></p>
+                            <p><button>Buy Now</button></p>
+                            </div>
+                      
+                          <div class="product-card">
+                              <img src="herbal/hairoil.jpg" alt="Avatar" style="width:100%">
+                             <h4>Icy Hair Oil</h4>
+                            <p class="price">Rs. 180</p>
+                            <p>This oil can help revitalise you by eradicating stress.</p>
+                            <p><button>Add to Cart</button></p>
+                            <p><button>Buy Now</button></p>
+                            </div>
+                      
+                      
+                            <div class="product-card">
+                                <img src="herbal/charcoal.jpg" alt="Avatar" style="width:100%">
+                             <h4>Charcoal Dental Gel </h4>
+                            <p class="price">Rs. 170</p>
+                            <p>Helps in preventing and mitigating bad odour and infections.</p>
+                            <p><button>Add to Cart</button></p>
+                            <p><button>Buy Now</button></p>
+                              </div>
+                      
+                            <div class="product-card">
+                                <img src="herbal/perfume.jpg" alt="Avatar" style="width:100%">
+                               <h4>Unisex Deodorant</h4>
+                            <p class="price">Rs. 250</p>
+                            <p>Ozone friendly and containing no gas. It keeps fragrance alive and is skin-friendly.</p>
+                            <p><button>Add to Cart</button></p>
+                            <p><button>Buy Now</button></p>
+                              </div>
+
+                            <div class="product-card">
+                                <img src="herbal/pocketperfume.jpg" alt="Avatar" style="width:100%">
+                                <h4>Pocket Perfume </h4>
+                              <p class="price">Rs. 105</p>
+                              <p>Fight body odour but also boosts your morale and uplifts your confidence level.</p>
+                              <p><button>Add to Cart</button></p>
+                              <p><button>Buy Now</button></p>
+                              </div> 
+
+                              <div class="product-card">
+                                <img src="herbal/henna.jpg" alt="Avatar" style="width:100%">
+                                <h4>Henna Powder</h4>
+                              <p class="price">Rs. 130</p>
+                              <p>Sustainable solution to common hair problems like dryness, dullness, dandruff, itchy scalp .</p>
+                              <p><button>Add to Cart</button></p>
+                              <p><button>Buy Now</button></p>
+                              </div> 
+
+                              <div class="product-card">
+                                <img src="herbal/aloesoap.jpg" alt="Avatar" style="width:100%">
+                                <h4>Ayurvedic Soap</h4>
+                              <p class="price">Rs. 75</p>
+                              <p>Makes the skin refreshing and invigorating. Experience youthful, fresh and clear skin.</p>
+                              <p><button>Add to Cart</button></p>
+                              <p><button>Buy Now</button></p>
+                              </div> 
+
+                              <div class="product-card">
+                                <img src="herbal/tulsi-1539181_1920.jpg" alt="Avatar" style="width:100%">
+                                <h4>Shri Tulsi</h4>
+                                <p class="price">Rs. 200</p>
+                                <p>It is beneficial for more than 200 diseases like cold, digestive problems, purifies water,etc.</p>
+                                <p><button>Add to Cart</button></p>
+                                <p><button>Buy Now</button></p>
+                              </div>
+                          
+                              <div class="product-card">
+                                  <img src="herbal/digest.jpg" alt="Avatar" style="width:100%">
+                                  <h4>Aloe Digest</h4>
+                                <p class="price">Rs. 185</p>
+                                <p>Helps you to retrieve from digestive disorders like cramps, vomiting, stomachache, acidity.</p>
+                                <p><button>Add to Cart</button></p>
+                                <p><button>Buy Now</button></p>
+                                </div>
+                          
+                              <div class="product-card">
+                                  <img src="herbal/eyedrop.jpg" alt="Avatar" style="width:100%">
+                                 <h4>Plus Eyedrop</h4>
+                                <p class="price">Rs. 125</p>
+                                <p>Prevents from various eye damages such as myopia, cataract, maintains a healthy retina, hypermetropia.</p>
+                                <p><button>Add to Cart</button></p>
+                                <p><button>Buy Now</button></p>
+                                </div>
+                          
+                          
+                                <div class="product-card">
+                                    <img src="herbal/noni.jpg" alt="Avatar" style="width:100%">
+                                 <h4>Noni Juice</h4>
+                                <p class="price">Rs. 650</p>
+                                <p>Controls blood sugar & bad cholestrol in cases of weight loss, irregular mensturation.</p>
+                                <p><button>Add to Cart</button></p>
+                                <p><button>Buy Now</button></p>
+                                  </div>
+                          
+                                <div class="product-card">
+                                    <img src="herbal/berry smoothie.jpg" alt="Avatar" style="width:100%">
+                                   <h4>Berry Juice</h4>
+                                <p class="price">Rs. 675</p>
+                                <p>Regulates cholestrol level & aids in weight loss by high metabolism.</p>
+                                <p><button>Add to Cart</button></p>
+                                <p><button>Buy Now</button></p>
+                                  </div>
+
+                                <div class="product-card">
+                                    <img src="herbal/turmeric.jpg" alt="Avatar" style="width:100%">
+                                    <h4>Vicco Turmeric</h4>
+                                  <p class="price">Rs. 195</p>
+                                  <p>Forces the poisonous substances to come out of your body.</p>
+                                  <p><button>Add to Cart</button></p>
+                                  <p><button>Buy Now</button></p>
+                                  </div> 
+
+                                  <div class="product-card">
+                                    <img src="herbal/aloeberry.jpg" alt="Avatar" style="width:100%">
+                                    <h4>Aloeberry Cream</h4>
+                                  <p class="price">Rs. 40</p>
+                                  <p>Keeps the skin spot-free and super soft. It makes the skin shine.</p>
+                                  <p><button>Add to Cart</button></p>
+                                  <p><button>Buy Now</button></p>
+                                  </div> 
+
+                                  <div class="product-card">
+                                    <img src="herbal/cleansingmilk.jpg" alt="Avatar" style="width:100%">
+                                    <h4>Cleansing Milk</h4>
+                                  <p class="price">Rs. 50</p>
+                                  <p>For Softer & cleansed skin for calm, beautiful radiant & healthy skin.</p>
+                                  <p><button>Add to Cart</button></p>
+                                  <p><button>Buy Now</button></p>
+                                  </div> 
+</div>
 </div>
   <!-- Footer of the website -->
   <footer>
@@ -83,7 +643,7 @@
         </ul>
     </div>
     <div class="columnfo1">
-      <h4>Get membership Now</h4>
+      <h4><a href="feedback.html" style="color:black;text-decoration: none;">Click here to send a feedback</a></h4>
     </div>
   </div>
 </div>

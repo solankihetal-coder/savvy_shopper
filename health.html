@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="herbal/logo1.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SavvyShopper</title>
   <link rel="stylesheet" href="stylesheet.css">
@@ -9,88 +10,107 @@
 <body>
 <!-- navbar -->
   <nav class="navbar">
-    <div class="logo"><img src="/herbal/logo.png" alt="logo" width="190px"></div>
+    <div class="logo"><img src="herbal/logo.png" alt="logo" width="190px"></div>
     <ul class="menu">
-      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <div class="dropdown">
         <button class="dropbtn">Shop</button>
         <div class="dropdown-content">
         <a href="homecare.html">Home Care</a>
-        <!-- <a href="#">Baby Care</a> -->
+        <a href="babycare.html">Baby Care</a>
         <a href="health.html">Health & Nutrition</a>
         <a href="agriculture.html">Agriculture & Veterinary</a>
         <a href="skincare.html">Skin Care</a>
+        <a href="personal.html">Personal Care</a>
+        <a href="books.html">Books & Literature</a>
+        <a href="food.html">Food Care</a>
         </div>
       </div>
-      <!-- <li><a href="shop.html">Shop</a></li> -->
       <li><a href="#about">About</a></li>
-      <li><a href="register.html">Join Membership/Contact</a></li> <!-- yaha pe dekhte h kya rkhna h -->
-      <li><a href="login.html" class="button1">Login/Sign Up</a></li>
-      <li><a href="#search"><img src="/herbal/search.png" alt="" width="20px"></a></li>
-      <li><a href="#cart"><img src="/herbal/cart.png" alt="" width="25px"></a></li>
+      <li><a href="register.html">Join Membership</a></li> <!-- yaha pe dekhte h kya rkhna h -->
+      <li><a href="logout.php" class="button1">Logout</a></li>
+      <li><a href="#search"><img src="herbal/search.png" alt="" width="20px"></a></li>
+      <li><a href="#cart"><img src="herbal/cart.png" alt="" width="25px"></a></li>
     </ul>
   </nav>
+
   <!-- Product content -->
-<div id="product">
-    <div class="product-items">
-        <div class="row">
-            <div class="col-prod">
-                <div class="product-card">
-                    <img src="" alt="" style="width:100%">
-                    <h2>Shri Tulsi</h2>
-                    <p class="price">Rs. 200</p>
-                    <p>It is beneficial for more than 200 diseases like cold, digestive problems, purifies water,etc.</p>
-                    <p><button>Add to Cart</button></p>
-            </div>
-        </div>
-        <div class="col-prod">
-            <div class="product-card">
-                <img src="" alt="" style="width:100%">
-                <h2>Aloe Digest</h2>
-                <p class="price">Rs. 185</p>
-                <p>Helps you to retrieve from digestive disorders like cramps, vomiting, stomachache, acidity.</p>
-                <p><button>Add to Cart</button></p>
-             </div>
-        </div>
-    <div class="col-prod">
-        <div class="product-card">
-            <img src="" alt="" style="width:50%">
-            <h2>Plus Eyedrop</h2>
-            <p class="price">Rs. 125</p>
-            <p>Prevents from various eye damages such as myopia, cataract, maintains a healthy retina, hypermetropia.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
+  <div id="product">
+    <div class="background-baby">
+      <h2>Welcome to Health Care!</h2><hr style="margin-left:1%;margin-right:1%;">
+     </div>
+    <div class="product-container">
+      <div class="product-card">
+        <img src="herbal/tulsi-1539181_1920.jpg" alt="" style="width:100%">
+        <h4>Shri Tulsi</h4>
+        <p class="price">Rs. 200</p>
+        <p>It is beneficial for more than 200 diseases like cold, digestive problems etc.</p>
+        <p><button>Add to Cart</button></p>
+        <p><button>Buy Now</button></p>
+      </div>
+
+      <div class="product-card">
+          <img src="herbal/capsules-1079838_1920.jpg" alt="" style="width:100%">
+          <h4>Aloe Digest</h4>
+          <p class="price">Rs. 185</p>
+          <p>Helps you to retrieve from digestive disorders like cramps, vomiting, acidity.</p>
+          <p><button>Add to Cart</button></p>
+          <p><button>Buy Now</button></p>
+      </div>
+      <div class="product-card">
+      <img src="herbal/test-tube-5065418_1920.jpg" alt="" style="width:100%">
+      <h4>Plus Eyedrop</h4>
+      <p class="price">Rs. 125</p>
+      <p>Prevents from various eye damages such as myopia, cataract, maintains a healthy retina, hypermetropia.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+      </div>
+
+      <div class="product-card">
+      <img src="herbal/orange juice.jpg" alt="" style="width:100%">
+      <h4>Noni Juice</h4>
+      <p class="price">Rs. 650</p>
+      <p>Controls blood sugar & bad cholestrol in cases of weight loss, irregular mensturation.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+      </div>
+
+      <div class="product-card">
+      <img src="herbal/blueberry-2350367_1920.jpg" alt="" style="width:100%">
+      <h4>Berry Juice</h4>
+      <p class="price">Rs. 675</p>
+      <p>Regulates cholestrol level and aids in weight loss by enhancing metabolism.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
+      </div>
+  
+      <div class="product-card">
+      <img src="herbal/turmeric.jpg" alt="" style="width:100%">
+      <h4>Shri Haldi</h4>
+      <p class="price">Rs. 195</p>
+      <p>Forces the poisonous substances from existing in your body to come out.</p><br>
+      <p><button>Add to Cart</button>
+      </p><p><button>Buy Now</button></p>
     </div>
+
+    <div class="product-card">
+      <img src="" alt="" style="width:100%">
+      <h4>Shri Haldi</h4>
+      <p class="price">Rs. 195</p>
+      <p>Forces the poisonous substances from existing in your body to come out.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
     </div>
-    <div class="row">
-    <div class="col-prod">
-        <div class="product-card">
-            <img src="" alt="" style="width:100%">
-            <h2>Noni Juice</h2>
-            <p class="price">Rs. 650</p>
-            <p>Controls blood sugar & bad cholestrol in cases of weight loss, irregular mensturation.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
+
+    <div class="product-card">
+      <img src="" alt="" style="width:100%">
+      <h4>Shri Haldi</h4>
+      <p class="price">Rs. 195</p>
+      <p>Forces the poisonous substances from existing in your body to come out.</p>
+      <p><button>Add to Cart</button></p>
+      <p><button>Buy Now</button></p>
     </div>
-    <div class="col-prod">
-        <div class="product-card">
-            <img src="" alt="" style="width:100%">
-            <h2>Berry Juice</h2>
-            <p class="price">Rs. 675</p>
-            <p>Powerhouse of oxygen and vitamin c. Regulates cholestrol level and aids in weight loss by enhancing metabolism.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
-    <div class="col-prod">
-        <div class="product-card">
-            <img src="" alt="" style="width:100%">
-            <h2>Shri Haldi</h2>
-            <p class="price">Rs. 195</p>
-            <p>Forces the poisonous substances from existing in your body to come out.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
-    </div>
+  </div>
 </div>
   <!-- Footer of the website -->
   <footer>
@@ -98,7 +118,7 @@
     <div class="row">
       <div class="columnfo1">
     <div class="logo">
-      <img src="/herbal/logo.png" alt="logo" style="width: 210px;">
+      <img src="herbal/logo.png" alt="logo" style="width: 210px;">
       <h5>SavvyShopper is a community of herbal enthusiasts, wellness advocates, and nature lovers. 
         Follow us on social media for tips, recipes, and stories that inspire.
       </h5>
@@ -107,13 +127,13 @@
   <div class="columnfo1">
         <ul>
           <li><h4>Get in touch</h4></li>
-          <li><img src="/herbal/email.jpg" alt="" style="width: 15px;">&nbsp;SavvyShopper11@gmail.com</li>
-          <li><img src="/herbal/call-removebg-preview.png" alt="" style="width: 15px;">&nbsp;0123456789</li>
+          <li><img src="herbal/email.jpg" alt="" style="width: 15px;">&nbsp;SavvyShopper11@gmail.com</li>
+          <li><img src="herbal/call-removebg-preview.png" alt="" style="width: 15px;">&nbsp;0123456789</li>
           <li><img src="herbal/instagram-removebg-preview.png" alt="" style="width: 20px;">SavvyShopper_11</li>
         </ul>
     </div>
     <div class="columnfo1">
-      <h4>Get membership Now</h4>
+      <h4><a href="feedback.html" style="color:black;text-decoration: none;">Click here to send a feedback</a></h4>
     </div>
   </div>
 </div>

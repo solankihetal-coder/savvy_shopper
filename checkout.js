@@ -1,62 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const checkoutButton = document.getElementById('checkout-button');
-    const cartItemsDiv = document.getElementById('cart-items');
-    const paymentStatusDiv = document.getElementById('payment-status');
+// checkout.js (JavaScript)
 
-    // Fetch cart items from your PHP backend (/api/cart)
-    fetch('/api/cart')
-        .then(response => response.json())
-        .then(cart => {
-            if (cart && cart.length > 0) {
-                cart.forEach(item => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.innerHTML = `
-                        <img src="${item.image_path}" alt="${item.name}" style="max-width: 100px;">
-                        <h3>${item.name}</h3>
-                        <p>${item.description}</p>
-                        <p>Quantity: ${item.quantity}</p>
-                        <p>Price: $${(item.price / 100).toFixed(2)}</p>
-                    `;
-                    cartItemsDiv.appendChild(itemDiv);
-                });
-            } else {
-                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
-                checkoutButton.disabled = true;
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching cart:', error);
-            cartItemsDiv.innerHTML = '<p>Error loading cart.</p>';
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    // Sample product data (replace with your actual data)
+    // const products = [
+    //     { name: "Product 1", price: 29.99, quantity: 1 },
+    //     { name: "Product 2", price: 49.95, quantity: 2 },
+    //     { name: "Product 3", price: 19.50, quantity: 1 }
+    // ];
 
-    checkoutButton.addEventListener('click', () => {
-        fetch('/stripe-checkout', {
+    // function displayOrderSummary() {
+    //     const productList = document.getElementById("product-list");
+    //     const totalAmountSpan = document.getElementById("total-amount");
+    //     let total = 0;
+
+    //     productList.innerHTML = ""; // Clear previous product list
+
+    //     products.forEach(product => {
+    //         const listItem = document.createElement("li");
+    //         listItem.textContent = `${product.name} (Qty: ${product.quantity}) - $${(product.price * product.quantity).toFixed(2)}`;
+    //         productList.appendChild(listItem);
+    //         total += product.price * product.quantity;
+    //     });
+
+    //     totalAmountSpan.textContent = `$${total.toFixed(2)}`;
+    // }
+
+    // displayOrderSummary(); // Display the order summary when the page loads
+
+    document.getElementById('address-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        formData.append('products', JSON.stringify(products)); // Add product data as JSON
+
+        fetch('process_order.php', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            body: formData
         })
         .then(response => response.json())
         .then(data => {
-            if (data.url) {
-                window.location.href = data.url;
-            } else if (data.error) {
-                paymentStatusDiv.innerHTML = `<p style="color:red;">Error: ${data.error}</p>`;
+            const statusDiv = document.getElementById('order-status');
+            if (data.success) {
+                statusDiv.innerHTML = '<p style="color: green;">' + data.message + '</p>';
+                document.getElementById('address-form').reset();
             } else {
-                paymentStatusDiv.innerHTML = `<p style="color:red;">An unknown error occurred.</p>`;
+                statusDiv.innerHTML = '<p style="color: red;">' + data.message + '</p>';
             }
         })
         .catch(error => {
-            console.error('Error during checkout:', error);
-            paymentStatusDiv.innerHTML = `<p style="color:red;">Error during checkout.</p>`;
+            console.error('Error:', error);
+            document.getElementById('order-status').innerHTML = '<p style="color: red;">An error occurred.</p>';
         });
     });
-
-    // Check for payment status from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('payment') === 'done') {
-        paymentStatusDiv.innerHTML = '<p style="color:green;">Payment successful!</p>';
-    } else if (urlParams.get('payment_fail') === 'true') {
-        paymentStatusDiv.innerHTML = '<p style="color:red;">Payment failed.</p>';
-    }
 });

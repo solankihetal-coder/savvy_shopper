@@ -22,14 +22,14 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize datepicker
-    $('#expiry-date').datepicker({
-        format: 'mm/yy',
-        startView: 'years',
-        minViewMode: 'months',
-        autoclose: true
-    });
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Initialize datepicker
+//     $('#expiry-date').datepicker({
+//         format: 'mm/yy',
+//         startView: 'years',
+//         minViewMode: 'months',
+//         autoclose: true
+//     });
 
     document.getElementById('payment-form').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('payment-status').innerHTML = '<p style="color: red;">An error occurred.</p>';
             });
     });
-});
 
 
 // document.addEventListener('DOMContentLoaded', function() {

@@ -7,11 +7,10 @@
   <title>Payment</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<style>
+    <style>
+      
 .payment-container {
-    width: 600px;
+    width: 800px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 5px;
@@ -31,27 +30,47 @@ input[type="text"] {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background-color: #9ab194;
 }
 
-button {
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+.product-list li {
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+}
+
+.button input{
     border: none;
     outline: 0;
     padding: 12px;
-    color: white;
-    background-color: #19441e;
+    color: rgb(255, 255, 255);
+    background-color: #1d3b20;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
 }
 
+.button input:hover {
+    background-color: #0e0f0e;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="logo"><img src="herbal/logo.png" alt="logo" width="190px"></div>
         <ul class="menu">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="homepage.html">Home</a></li>
           <div class="dropdown">
             <button class="dropbtn">Shop</button>
             <div class="dropdown-content">
@@ -72,26 +91,46 @@ button {
           <li><a href="#cart"><img src="herbal/cart.png" alt="" width="25px"></a></li>
         </ul>
       </nav>
+
   <div id="payment-status">
     <div class="payment-container">
         <h2>Payment Information</h2>
         <form id="payment-form">
+          <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+        
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+        
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+        
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+        
+                <label for="pincode">Pincode:</label>
+                <input type="number" id="pincode" name="pincode" required>
+        
+                <label for="landmark">Landmark (Optional):</label>
+                <input type="text" id="landmark" name="landmark">
             <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" name="card-number" required>
+            <input type="number" id="card-number" name="card-number" step="0.01" required>
 
             <!-- <label for="expiry-date">Expiry Date:</label>
             <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required> -->
 
             <label for="expiry-date">Expiry Date:</label>
-            <input type="text" id="expiry-date" name="expiry-date" data-provide="datepicker" placeholder="MM/YY" required>
+            <input type="month" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
 
             <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
+            <input type="password" id="cvv" name="cvv" step="0.01" required>
 
             <label for="card-name">Name on Card:</label>
             <input type="text" id="card-name" name="card-name" required>
-
-            <button type="submit">Place Your Order</button>
+            <div class="button">
+              <input type="submit" value="Order Confirm">
+          </div>
+            <!-- <button type="submit">Place Your Order</button> -->
         </form>
         </div>
     </div>
@@ -122,7 +161,10 @@ button {
         <div class="footerBottom">
         <p>Copyright &copy 2022; designed by SavvyShopper </p>
         </div>
+      </div>
     </footer>
     <script src="payment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </body>
 </html>

@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_query($conn, $query)) {
         echo "Registration successful!";
         // Redirect to a success page or login page
-        header("Location: homepage.html");//Create homepage.html. Copy index.html and change login to logout
+        header("Location: homepage.html");//Create homepage.html. Copy index.php and change login to logout
          exit();
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);

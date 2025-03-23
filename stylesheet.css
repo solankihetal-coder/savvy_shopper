@@ -883,3 +883,22 @@ footer li {
 
 
 /* checkout section end */
+
+/* payment confirm section start */
+
+.payment-confirm{
+  /* background-color: red; */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.payment-confirm p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+
+/* payment confirm section end*/

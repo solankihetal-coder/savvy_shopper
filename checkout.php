@@ -21,7 +21,7 @@
             <img src="herbal/logo.png" alt="logo" width="190px">
         </div>
         <ul class="menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
@@ -85,7 +85,7 @@
             </div>
             <!-- <div><button>Pay With Card - 
             </button></div> -->
-        <form action="">
+        <form action="submit.php" method='post'>
 
             <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"

@@ -1,7 +1,9 @@
-<!-- database connection -->
 <?php
   include('connect.php');
   include('add_to_cart.php');
+include('stripe_config.php');
+// echo '<pre>';
+// print_r($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -42,64 +44,15 @@
             <li><a href="cart.php"><img src="herbal/cart.png" alt="" width="25px"></a><?php echo getCartCount();   ?></li>
         </ul>
     </nav>
-    <section class='cart-page'>
-    <div class='cart-header'>
-                <div>
-                    <h4>Product</h4>
-                </div>
-                <div class='cart-subheader'>
-                    <h4>Quantity</h4>
-                    <h4>Subtotal</h4>
-                </div>
-            </div>
-            <div class='cart-top-wrapper'>
-    <?php
-getCartDetails();
-?>
-     </div>
- 
-     <?php
-isCartEmpty();
-?>
-     
-</section>
 
-    <!-- <section class='cart-page'> -->
-        <!-- <div class="cart-top">
-            <div class="cart-header">
-                <div>
-                    <h4>Product</h4>
-                </div>
-                <div class="cart-subheader">
-                    <h4>Quantity</h4>
-                    <h4>Subtotal</h4>
-                </div>
-            </div>
-            <div class="cart-body">
-                <div class="cart-lbody">
-                    <div class="cart-img"><img src="herbal/agarbatti.jpg" alt=""></div>
-                    <div>
-                        <p>agarbatti</p>
-                        <p>Price: 2000</p>
-                    </div>
-                </div>
-                <div class="cart-rbody">
-                    <p>1</p>
-                    <p>2000</p>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="cart-bottom">
-            <div>
-                <p>Gross Total</p>
-                <p>2500</p>
-            </div>
-            <a href="checkout.php"><div><button>Checkout</button></div></a>
-        </div> -->
-     
-<!-- </section> -->
+    <div class="payment-confirm">
+        <img src="https://www.strongsupport.co.uk/wp-content/uploads/2020/10/thank-you.png" alt="">
+        <p>Payment Successfull</p>
+        <a href="index.php">Go To Home</a>
+    </div>
 
-<footer>
+
+    <footer>
         <div class="footerContainer">
             <div class="row">
                 <div class="columnfo1">
@@ -126,6 +79,6 @@ isCartEmpty();
             </div>
         </div>
     </footer>
-
-</body>
-</html>
+    
+ </body>
+ </html>

@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username === 'testuser' && $password === 'password') {
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        header('Location: index.html'); // Redirect to the main page
+        header('Location: index.php'); // Redirect to the main page
         exit;
     } else {
         echo "Login failed.";

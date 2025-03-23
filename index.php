@@ -1,3 +1,8 @@
+<?php
+  include('connect.php');
+  include('add_to_cart.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +17,7 @@
   <nav class="navbar">
     <div class="logo"><img src="herbal/logo.png" alt="logo" width="190px"></div>
     <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <div class="dropdown">
         <button class="dropbtn">Shop</button>
         <div class="dropdown-content">
@@ -31,7 +36,7 @@
       <li><a href="register.html">Join Membership</a></li> <!-- yaha pe dekhte h kya rkhna h -->
       <li><a href="login.html" class="button1">Login/Sign Up</a></li>
       <li><a href="#search"><img src="herbal/search.png" alt="" width="20px"></a></li>
-      <li><a href="#cart"><img src="herbal/cart.png" alt="" width="25px"></a>--</li>
+      <li><a href="#cart"><img src="herbal/cart.png" alt="" width="25px"></a><?php echo getCartCount();   ?></li>
     </ul>
   </nav>
   <!-- Header content of the website -->

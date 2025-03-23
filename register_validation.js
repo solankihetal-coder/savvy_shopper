@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                  alert(data.message); // You can replace this with a more styled modal
  
                  // Redirect to homepage.html
-                 window.location.href = 'homepage.html'; // Or 'index.html' if that's your homepage
+                 window.location.href = 'homepage.html'; // Or 'index.php' if that's your homepage
              } else {
                  // Display error message
                  alert(data.message); // Display the error message from PHP

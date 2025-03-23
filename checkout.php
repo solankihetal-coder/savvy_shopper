@@ -1,6 +1,7 @@
 <?php
   include('connect.php');
   include('add_to_cart.php');
+  include('stripe_config.php');
 ?>
 
 <!DOCTYPE html>
@@ -75,11 +76,30 @@
             </div>
         </div>
         <div class="card-info">
-            <div><h4>Card Info</h4></div>
-            <div><input type="text" placeholder="1234 1234 1234 1234" /></div>
+            <div><h4>Payment</h4></div>
+            <!-- <div><input type="text" placeholder="1234 1234 1234 1234" /></div>
             <div><input type="text" placeholder="MM / YY"/></div>
-            <div><input type="text" placeholder="CVV"/></div>
-            <div><button>Pay - <?php  getFinalTotal();   ?></button></div>
+            <div><input type="text" placeholder="CVV"/></div> -->
+            <div class="card-image-wrapper">
+                <img src="https://www.pngall.com/wp-content/uploads/5/Online-Payment-PNG-Photo.png" alt="">
+            </div>
+            <!-- <div><button>Pay With Card - 
+            </button></div> -->
+        <form action="">
+
+            <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<?php echo $Publishablekey ?>"
+            data-amount="400"
+            data-name="Shop with Savvy Shopper"
+            data-description="This is the Savvy Shopper"
+            data-image="https://tse4.mm.bing.net/th?id=OIP._90s7Dl0mQyALLK3ZB8_ywHaHa&pid=Api&P=0&h=220"
+            data-currency="inr"
+            data-email="<?php echo $get_email ?>"
+            >
+            
+            </script>
+        </form>
         </div>
     </div>
 

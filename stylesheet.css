@@ -771,6 +771,17 @@ footer li {
   text-decoration: none;
 }
 
+.card-image-wrapper{
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
 /* cart page end */
 
 /* checkout section start */

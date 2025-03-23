@@ -5,6 +5,13 @@ include('connect.php');
 
 $get_email=$_SESSION['email'];
 
+function emptyCart() {
+    global $conn;
+    $get_user=$_SESSION['userid'];
+    $delete_query = "DELETE FROM `cart` WHERE user_id = $get_user";
+    $result = mysqli_query($conn, $delete_query);
+}
+
 function getCartCount() {
     global $conn;
     $get_ip=getIpAddress();

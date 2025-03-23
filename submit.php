@@ -5,6 +5,7 @@ include('stripe_config.php');
 // echo '<pre>';
 // print_r($_POST);
 ?>
+    <?php emptyCart(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +51,7 @@ include('stripe_config.php');
         <p>Payment Successfull</p>
         <a href="index.php">Go To Home</a>
     </div>
+
 
 
     <footer>

@@ -31,6 +31,7 @@ async function getProducts() {
   const connection = await connectToDatabase();
   try {
     const [rows] = await connection.execute('SELECT * FROM products');
+
     return rows;
   } catch (error) {
     console.error('Error fetching products:', error);
@@ -46,6 +47,7 @@ async function getProducts() {
 async function displayProducts() {
   try {
     const products = await getProducts();
+    console.log(products,"productsproducts")
     // Code to dynamically add products to your HTML (using DOM manipulation)
     // ...
   } catch (error) {

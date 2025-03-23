@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // In a real application, you would validate the username and password against a database.
     if ($username === 'testuser' && $password === 'password') {
         $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
         header('Location: index.html'); // Redirect to the main page
         exit;
     } else {

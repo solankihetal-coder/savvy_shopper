@@ -19,7 +19,7 @@ function updateHeader() {
         if (this.status >= 200 && this.status < 400) {
             const data = JSON.parse(this.responseText);
             const headerDiv = document.querySelector('#dynamicHeader .auth-links');
-
+            localStorage.setItem('user',data);
             if (data.loggedIn) {
                 headerDiv.innerHTML = `
                     <span>Welcome, ${data.username}!</span>
